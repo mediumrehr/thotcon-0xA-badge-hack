@@ -1,0 +1,11 @@
+# Apple ignores
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# wav player library ignore
+thotcon-0xA-badge-code/*
+!thotcon-0xA-badge-code/thotcon-0xA-badge-code.ino
+!thotcon-0xA-badge-code/SoundData.h
+
