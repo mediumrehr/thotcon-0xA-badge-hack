@@ -1,4 +1,3 @@
-
 #include "SoundData.h";
 #include "XT_DAC_Audio.h";
 
@@ -10,30 +9,10 @@ XT_Wav_Class soundThotit(thotit_sound);
 XT_Wav_Class soundAttackit(attackit_sound);
 
 int threshold = 40;
-bool touch1detected = false;
-bool touch2detected = false;
-bool touch3detected = false;
-bool touch4detected = false;
-bool touch5detected = false;
+bool touchSelect = false;
 
-void gotTouch1(){
- touch1detected = true;
-}
-
-void gotTouch2(){
- touch2detected = true;
-}
-
-void gotTouch3(){
- touch3detected = true;
-}
-
-void gotTouch4(){
- touch4detected = true;
-}
-
-void gotTouch5(){
- touch5detected = true;
+void gotTouch5() {
+ touchSelect = true;
 }
 
 int score = 0;
@@ -86,9 +65,9 @@ void loop() {
       delay(gameSpeed);
       
       command = random(4) + 1;
-      // 1: back
+      // 1: forward
       // 2: left
-      // 3: front
+      // 3: backward
       // 4: right
       switch(command) {
         case 1:
@@ -180,12 +159,12 @@ void loop() {
       score = 0;
       command = 0;
       started = false;
-      touch5detected = false;
+      touchSelect = false;
       gameSpeed = 1000;
     }
   } else {
-    if (touch5detected) {
-      touch5detected = false;
+    if (touchSelect) {
+      touchSelect = false;
       
       delay(200);
 
