@@ -2,6 +2,8 @@
 
 A fast-paced game similar to [Bop it!](https://en.wikipedia.org/wiki/Bop_It), where the player must quickly tilt the badge to the intended side before time runs out!
 
+[Demo video](https://youtu.be/yE6hTh4mn40)
+
 ![](thot-it.gif)
 
 The badge communicates the intended tilt direction in two ways, with the LEDs and audio commands:
